@@ -65,6 +65,16 @@ export default function App() {
     );
   };
 
+  const Footer = () => {
+    return (
+      <div className="footer">
+        <p>
+          Created by <a href="https://purnchndr.github.io">Purnachandra</a>
+        </p>
+      </div>
+    );
+  };
+
   return (
     <>
       <Tips />
@@ -90,6 +100,7 @@ export default function App() {
           )}
         </div>
       </div>
+      <Footer />
     </>
   );
 }
