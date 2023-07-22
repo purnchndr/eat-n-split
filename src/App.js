@@ -53,7 +53,6 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1>Split you bills with friends 💸</h1>
       <div className="sidebar">
         <FriendList
           friends={friends}
