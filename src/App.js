@@ -50,28 +50,47 @@ export default function App() {
     );
     setSelectedFriend(null);
   }
+  const Tips = () => {
+    return (
+      <div className="tips">
+        <h1> Ean-n-Split : Split your bills 💸 </h1>
+        <p>
+          Click on the <strong>Add Friend</strong> button to add you friends.
+        </p>
+        <p>
+          Click on the <strong>Select Friend</strong> button to calculate your
+          bills.
+        </p>
+      </div>
+    );
+  };
 
   return (
-    <div className="app">
-      <div className="sidebar">
-        <FriendList
-          friends={friends}
-          onSelectFriend={handelSetSelectedFriend}
-          selectedFriend={selectedFriend}
-        />
+    <>
+      <Tips />
+      <div className="wrapper">
+        <div className="app">
+          <div className="sidebar">
+            <FriendList
+              friends={friends}
+              onSelectFriend={handelSetSelectedFriend}
+              selectedFriend={selectedFriend}
+            />
 
-        {showAddFriend && <FormAddFriend onAddFriend={handelAddFriend} />}
-        <Button onClick={handelSetShowAddFriend}>
-          {showAddFriend ? "hide" : "Add Friend"}
-        </Button>
+            {showAddFriend && <FormAddFriend onAddFriend={handelAddFriend} />}
+            <Button onClick={handelSetShowAddFriend}>
+              {showAddFriend ? "hide" : "Add Friend"}
+            </Button>
+          </div>
+          {selectedFriend && (
+            <FormASplitBill
+              onChangeBalance={handelChangeBalance}
+              selectedFriend={selectedFriend}
+            />
+          )}
+        </div>
       </div>
-      {selectedFriend && (
-        <FormASplitBill
-          onChangeBalance={handelChangeBalance}
-          selectedFriend={selectedFriend}
-        />
-      )}
-    </div>
+    </>
   );
 }
 
