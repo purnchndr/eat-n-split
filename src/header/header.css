@@ -1,0 +1,42 @@
+.main-header {
+  width: auto;
+  height: 4rem;
+  background-color: var(--clr-black);
+  border-radius: 1rem;
+  margin: 1.5%;
+  font-family: var(--secondary-font);
+  font-size: 18px;
+}
+
+.navlinks-container-links {
+  float: left;
+}
+
+.navlinks-container-logic {
+  float: right;
+}
+
+.nav-links {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--clr-primary);
+}
+
+.active {
+  color: var(--clr-white);
+}
+
+.header-logo-container {
+  height: 3rem;
+  float: left;
+}
+
+.header-logo {
+  height: 3rem;
+  padding: 0.5rem;
+}

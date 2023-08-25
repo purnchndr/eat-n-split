@@ -1,4 +1,5 @@
 import { useState } from "react";
+import icon from "./images/icon.png";
 
 const initialFriends = [
   {
@@ -52,16 +53,28 @@ export default function App() {
   }
   const Tips = () => {
     return (
-      <div className="tips">
-        <h1> Ean-n-Split : Split your bills 💸 </h1>
-        <p>
-          Click on the <strong>Add Friend</strong> button to add you friends.
-        </p>
-        <p>
-          Click on the <strong>Select Friend</strong> button to calculate your
-          bills.
-        </p>
-      </div>
+      <>
+        <div className="header">
+          <a
+            href="https://purnchndr.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={icon} alt="logo" />
+          </a>
+
+          <h1> Ean-n-Split : Split your bills 💸 </h1>
+        </div>
+        <div className="tips">
+          <p>
+            Click on the <strong>Add Friend</strong> button to add you friends.
+          </p>
+          <p>
+            Click on the <strong>Select Friend</strong> button to calculate your
+            bills.
+          </p>
+        </div>
+      </>
     );
   };
 
@@ -69,7 +82,7 @@ export default function App() {
     return (
       <div className="footer">
         <p>
-          Created by <a href="https://purnchndr.github.io">Purnachandra</a>
+          Created by <a href="https://purnchndr.netlify.app/">Purnachandra</a>
         </p>
       </div>
     );
